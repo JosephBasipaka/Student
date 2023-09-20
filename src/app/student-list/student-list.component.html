@@ -1,0 +1,27 @@
+<div>
+    <h2>Student Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Course</th>
+          <th>Fee</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.sid }}</td>
+          <td>{{ student.sname }}</td>
+          <td>{{ student.dob | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ student.course }}</td>
+          <td>{{ student.fee }}</td>
+          <td>{{ student.dob | age }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+ 
